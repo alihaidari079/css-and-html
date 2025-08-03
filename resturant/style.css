@@ -1,0 +1,36 @@
+/* .magnify {
+    position: relative;
+    width: 400px;
+    object-fit: cover;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: zoom-in;
+    border: 1px solid #ccc;
+} */
+
+.skew-button {
+    padding: 12px 24px;
+    background: #1e272e;
+    color: white;
+    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.skew-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    background-color: #ff3f34;
+    transform: skewX(-30deg);
+    transition: all 0.3s;
+}
+.skew-button:hover::before {
+    left: 100%;
+}
